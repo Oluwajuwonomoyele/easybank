@@ -8,8 +8,8 @@
 
     /* neutral */
     --grayish-blue: hsl(233, 8%, 62%);
-    --light-grayish-blue: hsl(220, 16%, 96%);
-    --very-light-gray: hsl(0, 0%, 98%);
+    --light-grayish-blue: #f4f5f7;
+    --very-light-gray: #f9f9f9;
     --white: hsl(0, 0%, 100%);
 
 }
@@ -50,7 +50,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 14rem;
+    padding: 1rem 10rem;
 }
 .menu li {
     display: inline-block;
@@ -82,9 +82,10 @@ a {
     height: 90%;
 }
 .home-section .left-col {
-    padding-left: 14rem;
+    padding-left: 10rem;
 }
 .home-section .left-col h1 {
+    color: var(--dark-blue);
     font-size: 4rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -105,4 +106,44 @@ a {
 .home-section .right-col img {
     width: 80%;
     transform: translateX(45%);
+}
+
+/* about section start */
+.about-section {
+    margin-top: -14.5rem;
+    background-color: var(--light-grayish-blue);
+    padding: 6rem 10rem;
+    text-align: left;
+}
+.about-section .intro {
+    padding-right: 29rem;
+}
+.about-section .intro h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+.about-section .intro p {
+    color: var(--grayish-blue);
+    font-size: 1.4rem;
+    margin-bottom: 6rem;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5rem;
+}
+.cards img {
+    margin-bottom: 2rem;
+}
+.cards h3 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.cards p {
+    color: var(--grayish-blue);
+    font-size: 1.3rem;
 }
