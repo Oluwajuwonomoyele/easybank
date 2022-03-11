@@ -26,6 +26,7 @@ html {
 body {
     font-size: 18px;
     font-family: "Public Sans", sans-serif;
+    overflow-x: hidden;
 }
 ul {
     list-style-type: none;
@@ -41,6 +42,7 @@ a {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 999;
     transition: all 0.3s ease-out;
 }
 #nav-bar .container {
@@ -48,7 +50,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 14rem;
+    padding: 1rem 14rem;
 }
 .menu li {
     display: inline-block;
@@ -68,4 +70,39 @@ a {
     border-radius: 2rem;
     text-transform: capitalize;
     font-weight: 700;
+}
+
+/* home section styling */
+.home-section {
+    background-color: var(--very-light-gray);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    align-items: center;
+    height: 90%;
+}
+.home-section .left-col {
+    padding-left: 14rem;
+}
+.home-section .left-col h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.home-section .left-col p {
+    color: var(--grayish-blue);
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+.home-section .right-col {
+    background-image: url('/images/bg-intro-desktop.svg');
+    background-repeat: no-repeat;
+    background-position-x: 50px;
+    background-position-y: -150px;
+    background-size: cover;
+    width: 100%;
+}
+.home-section .right-col img {
+    width: 80%;
+    transform: translateX(45%);
 }
