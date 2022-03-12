@@ -89,6 +89,7 @@ a {
 .menu-btn {
     cursor: pointer;
     display: none;
+    transform: scale(1.5);
 }
 
 
