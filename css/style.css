@@ -95,13 +95,13 @@ a {
 /* home section styling */
 .home-section {
     background-color: var(--very-light-gray);
-    display: grid;
-    grid-template-columns: 40% 60%;
+    display: flex;
     justify-items: center;
     align-items: center;
     height: 90%;
 }
 .home-section .left-col {
+    flex-basis: 45%;
     padding-left: 10rem;
 }
 .home-section .left-col h1 {
@@ -121,6 +121,7 @@ a {
     background-position-x: 50px;
     background-position-y: -150px;
     background-size: cover;
+    flex-basis: 55%;
     width: 100%;
 }
 .home-section .right-col img {
@@ -132,7 +133,7 @@ a {
 .about-section {
     margin-top: -14.5rem;
     background-color: var(--light-grayish-blue);
-    padding: 6rem 10rem;
+    padding: 7rem 10rem;
     text-align: left;
 }
 .about-section .intro {
