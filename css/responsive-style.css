@@ -1,4 +1,176 @@
 @media (max-width: 768px) {
+    #nav-bar .container {
+        padding: 1.5rem 2rem;
+    }
+    #nav-bar .container .request-btn {
+        display: none;
+    }
+    #nav-bar .container .menu-btn {
+        display: block;
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+    #nav-bar .container .menu-btn i {
+        transition: all 0.5s ease-out;
+    }
+    #nav-bar .container .menu-btn i.active:before {
+        content: '\f00d';
+    }
+    #nav-bar .container .menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        transition: all 0.2s ease-out;
+        transform: scale(0) translateY(4.5rem);
+    }
+    #nav-bar .container .menu-container.active {
+        transform: scale(1) translateY(4.5rem);
+    }
+    #nav-bar .container .menu-container .menu-bg {
+        position: fixed;
+        top: 0rem;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+        background: linear-gradient(45deg, var(--light-grayish-blue), var(--dark-blue));
+        opacity: 0.8;
+    }
+    #nav-bar .container .menu-container .menu {
+        background-color: var(--white);
+        position: fixed;
+        width: 85%;
+        display: flex;
+        z-index: 9999999;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        opacity: 1;
+        border-radius: 0.5rem;
+        transform: translateY(4rem);
+        padding: 2rem;
+    }
+    #nav-bar .container .menu-container .menu li {
+        display: block;
+    }
+    #nav-bar .container .menu-container .menu li a {
+        padding:0;
+        color: var(--dark-blue);
+    }
+    #nav-bar .container .menu-container .menu li a::after {
+        bottom: -4px;
+    }
+
+     /* home-section styling */
+     .home-section {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .home-section .left-col {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    .home-section .left-col h1 {
+        color: var(--dark-blue);
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .home-section .left-col p {
+        color: var(--grayish-blue);
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+    .home-section .right-col {
+        background-image: url('/images/bg-intro-mobile.svg');
+        background-repeat: no-repeat;
+        background-position-x: -10px;
+        background-position-y: 20px;
+        background-size: cover;
+        width: 100%;
+        text-align: center;
+    }
+    .home-section .right-col img {
+        width: 95%;
+        transform: translateX(0);
+        transform: translateY(-12%);
+    }
+    
+    /* about section styling */
+    .about-section {
+        margin-top: 0;
+        padding: 7rem 2rem;
+        text-align: center;
+    } 
+    .about-section .intro {
+        padding-right: 0;
+    }
+    .about-section .intro h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        padding: 0 3rem;
+    }
+    .about-section .intro p {
+        color: var(--grayish-blue);
+        font-size: 1.5rem;
+        margin-bottom: 6rem;
+    }
+    .cards {
+        grid-template-columns: none;
+        grid-row-gap: 3rem;
+    }
+    .cards h3 {
+        font-size: 2rem;
+    }
+    .cards p {
+        color: var(--grayish-blue);
+        font-size: 1.5rem;
+    }
+    
+    /* blog section styling */
+    .blog-section {
+        padding: 8rem 2rem;
+        text-align: center;
+    } 
+    .blog-section h2 {
+        font-size: 2.3rem;
+    }
+    .blogs {
+        flex-direction: column;
+    }
+    .blog {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .blog-text {
+        text-align: left;
+        
+    }
+
+    /* footer section styling */
+    .footer-section {
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 2rem;
+        gap: 3rem;
+    }
+    .footer-section .left-col {
+        flex-direction: column;
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer-section .left-col .one {
+        margin-bottom: 2rem;
+    }
+    .footer-section .right-col {
+        text-align: center;
+        flex-basis: 100%;
+    }
 
 }
 
@@ -76,9 +248,10 @@
     .home-section {
         flex-direction: column-reverse;
         height: 100%;
+        padding-bottom: 4rem;
     }
     .home-section .left-col {
-        padding: 0 2rem;
+        padding: 2rem;
         text-align: center;
     }
     .home-section .left-col h1 {
@@ -109,7 +282,7 @@
     
     /* about section styling */
     .about-section {
-        margin-top: 5rem;
+        margin-top: 0;
         padding: 7rem 2rem;
         text-align: center;
     } 

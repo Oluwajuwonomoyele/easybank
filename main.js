@@ -11,9 +11,8 @@ openNav.addEventListener('click', () => {
 });
 menuBg.addEventListener('click', () => {
     menu.classList.remove('active');
+    closeNav.classList.remove('active');
 });
-
-
 navLink.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('active');
